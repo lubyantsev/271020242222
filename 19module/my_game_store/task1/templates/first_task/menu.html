@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        nav a {
+            display: block; /* Изменение на блочный элемент */
+            margin: 5px 0; /* Отступы между ссылками */
+        }
+    </style>
+</head>
+<body>
+<h1>{% block pagename %}Главная страница{% endblock %}</h1> <!-- Заголовок страницы -->
+<nav>
+    <a href="{% url 'home' %}">Главная</a>
+    <a href="{% url 'shop' %}">Магазин</a>
+    <a href="{% url 'cart' %}">Корзина</a>
+</nav>
+<div>
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>
